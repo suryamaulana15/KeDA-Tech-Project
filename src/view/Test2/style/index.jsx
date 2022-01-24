@@ -4,6 +4,9 @@ const Main = makeStyles(theme => ({
   root: {
     padding: theme.spacing(4)
   },
+  marginBottom: {
+    marginBottom: theme.spacing(2)
+  }
 }));
 
 export default Main;

@@ -111,18 +111,14 @@ const Test1 = props => {
   return (
     <Fragment>
       <div className={classes.root}>
-        <Grid container spacing={2}>
-          <Grid item xl={4} md={4} sm={4} xs={4}>
-            {dateValue}
-          </Grid>
-
-          <Grid item xl={4} md={4} sm={4} xs={4}>
+        <Grid container justifyContent={"center"}>
+          <Grid item>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div>
-                <FormControl component={"fieldset"} fullWidth>
-                  <FormLabel>
-                    1. Take a prop that can display Labels
-                  </FormLabel>
+              <div className={classes.marginBottom}>
+                1. Take a prop that can display Labels
+              </div>
+              <div className={classes.marginBottom}>
+                {/*<FormControl component={"fieldset"} fullWidth>*/}
                   <FormControl component="fieldset" error={errors.name && true}>
                     <FormLabel component="legend">Name</FormLabel>
                     <RadioGroup
@@ -140,13 +136,12 @@ const Test1 = props => {
                       {errors.name && errors.name.message}
                     </FormHelperText>
                   </FormControl>
-                </FormControl>
               </div>
 
-              <div>
-                <FormLabel>
-                  2. Can take in subcomponents so that each radio button is flexible in showing itssub-components.
-                </FormLabel>
+              <div className={classes.marginBottom}>
+                2. Can take in subcomponents so that each radio button is flexible in showing itssub-components.
+              </div>
+              <div className={classes.marginBottom}>
                 <FormControl component={"fieldset"} fullWidth error={errors.radio_flexible && true}>
                   <FormGroup row>
                     <FormLabel>
@@ -179,7 +174,7 @@ const Test1 = props => {
 
                     {/*{dateValue}*/}
                   </FormGroup>
-                  <br/>
+                  {/*<br/>*/}
                   <FormGroup row>
                     <FormLabel>
                       b. Date-Field Components:
@@ -273,14 +268,11 @@ const Test1 = props => {
                     {errors.radio_flexible && errors.radio_flexible.message}
                   </FormHelperText>
                 </FormControl>
-              </div>
-              <Grid container justifyContent={"flex-end"}>
                 <Button variant={"contained"} type={"submit"} color={"secondary"} disabled={value === null && true}>
                   Submit
                 </Button>
-              </Grid>
+              </div>
             </form>
-
           </Grid>
         </Grid>
       </div>

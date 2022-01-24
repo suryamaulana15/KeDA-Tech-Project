@@ -50,7 +50,8 @@ const FirstQuestion = props => {
                 inputRef={register}
                 error={errors.max_iterations && true}
                 helperText={errors.max_iterations && errors.max_iterations.message}
-                defaultValue={0}
+                // defaultValue={0}
+                placeholder={0}
                 name={"max_iterations"}
                 // onChange={handleChange}
               />
